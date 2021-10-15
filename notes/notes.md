@@ -3,15 +3,16 @@
 ## Summary
 
 Elm is a **functional** language that **compiles to JavaScript**
-It is designed for web apps
-It emphasizes simplicity and good tooling
+
+- It is designed for web apps
+- It emphasizes simplicity and good tooling
 
 ## Key Benefits
 
-No runtime errors
-Friendly error messages
-Reliable refactoring
-Enforced semantic versioning for all packages
+- No runtime errors
+- Friendly error messages
+- Reliable refactoring
+- Enforced semantic versioning for all packages
 
 # Core Language
 Elm consists of **values** and **functions**. In the examples below, a `>` denotes code being executed in the console.
@@ -41,7 +42,7 @@ concat first last =
 ```
 
 Note the needed parentheses. Thankfully Elm provides helpful error messages if you forget:
-![](/home/kevin/code/learning-elm/notes/elm.png)
+![Elm Error Message](./elm.png)
 
 There are also **if-expressions**:
 
@@ -111,6 +112,8 @@ When updating that record, you might say "person where job is developer".  Note 
 
 https://stackoverflow.com/questions/46684628/updating-records-in-elm-what-happened-to-the-old-one
 
+![Record Update Graph](./graph.png)
+
 # The Elm Architecture
 
 - **Model** — the state of your application
@@ -148,7 +151,9 @@ main =
 type alias Model = Int
 
 -- Type annotation.
--- Elm can infer this information usually, but writing it explicitly improves error message -- quality and serves as documentation. The compiler will ALWAYS verify that the annotations -- are correct, so the "documentation" stays up to date.
+-- Elm can infer this information usually, but writing it explicitly improves error message
+-- quality and serves as documentation. The compiler will ALWAYS verify that the annotations
+-- are correct, so the "documentation" stays up to date.
 init : Model
 init =
   0
@@ -159,7 +164,8 @@ init =
 -- correspond to user interactions. The messages determine how to update the model state.
 
 -- Custom type.
--- This is often a better way of modeling records with shared data, or variants, as custom --- types can have associated data attached to them.
+-- This is often a better way of modeling records with shared data, or variants, as custom 
+--- types can have associated data attached to them.
 type Msg
   = Increment
   | Decrement
